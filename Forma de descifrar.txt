@@ -1,0 +1,1 @@
+openssl enc -aes-256-cbc -d -in cifrado.enc -out descifrado -pass "pass:mypassword"

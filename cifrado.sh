@@ -121,7 +121,13 @@ output=$(<"$output_file.enc" 2>/dev/null)
 # Aplicar el cifrado César al contenido cifrado
 output=$(echo "$output" | tr "a-zA-Z" "$(echo {a..z}$(echo {a..z} | tr -d ' ')$(echo {A..Z}$(echo {A..Z} | tr -d ' ' 2>/dev/null)) tr "${offset}-za-${offset}${offset}-ZA-${offset}" "a-zA-Z")"  2>/dev/null )  
 # Escribir el contenido cifrado y César en el archivo de salida
-echo "$output" > "$output_file" 2>/dev/null
+echo "$output" >> "$output" 2>/dev/null
 rm "$input_file"
+
+
+
+
+
+
 
 
